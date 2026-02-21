@@ -1,0 +1,15 @@
+format_version: "1.1"
+services:
+  - name: ai-platform
+    url: http://localhost:8000
+    routes:
+      - name: ai-platform-route
+        paths:
+          - /api
+plugins:
+  - name: oauth2
+    config:
+      enable_password_grant: true
+      scopes:
+        - email
+        - phone
